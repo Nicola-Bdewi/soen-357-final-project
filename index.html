@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sip 'n Safe</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+        <!-- <style>
+            body {
+                background-image: url('coffee-background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style> -->
+      </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ms-3" href="#">Sip 'n Safe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="diary.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact-us.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recommendations.html">Recommendations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="faqs.html">FAQs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="events.html">Events</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item me-3" id="signin">
+                  <a class="nav-link" href="login.html">Sign In</a>
+              </li>
+              <li class="nav-item me-3" id="joinnow">
+                  <a class="btn btn-outline-dark" href="#">Join Now</a>
+              </li>
+              <li class="nav-item me-3" id="username" style="display: none;"></li>
+              <ul class="navbar-nav">
+               
+                <li class="nav-item me-3" id="useremail" style="display: none;"></li> 
+                <li class="nav-item me-3" id="signout" style="display: none;">
+                    <a class="btn btn-outline-dark" href="#" onclick="logout()">Sign Out</a>
+                </li>
+            </ul>
+            
+      
+          </ul>          
+        </div>
+    </nav>
+    
+    <section mt-5>
+        <div class="container order-section">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="img/flyer.jpg" alt="Check out our latest deals in the flyer!" class="img-fluid">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start"> 
+                    <div class="col-md-7 col-lg-12 py-8 text-md-start text-center">
+                        <h1 class="text-800 mb-5 fs-4">Within a few clicks, your coffee will<br class="d-none d-xxl-block" />be accessible near you</h1>
+                        <div class="card w-80"> 
+                          <div class="card-body">
+                            <nav>
+                              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active mb-3" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-motorcycle me-2"></i>Delivery</button>
+                                <button class="nav-link mb-3" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fas fa-shopping-bag me-2"></i>Pickup</button>
+                              </div>
+                            </nav>
+                            <div class="tab-content mt-3" id="nav-tabContent">
+                              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <form class="row gx-2 gy-2 align-items-center">
+                                  <div class="col">
+                                    <div class="input-group-icon"><i class="fas fa-map-marker-alt text-danger input-box-icon"></i>
+                                      <label class="visually-hidden" for="inputDelivery">Address</label>
+                                      <input class="form-control input-box form-foodwagon-control" id="inputDelivery" type="text" placeholder="Enter Your Address" />
+                                    </div>
+                                  </div>
+                                  <div class="d-grid gap-3 col-sm-auto">
+                                    <button class="btn btn-outline-warning" type="submit">Order now</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <form class="row gx-4 gy-2 align-items-center">
+                                  <div class="col">
+                                    <div class="input-group-icon"><i class="fas fa-map-marker-alt text-danger input-box-icon"></i>
+                                      <label class="visually-hidden" for="inputPickup">Address</label>
+                                      <input class="form-control input-box form-foodwagon-control" id="inputPickup" type="text" placeholder="Enter Your Address" />
+                                    </div>
+                                  </div>
+                                  <div class="d-grid gap-3 col-sm-auto">
+                                    <button class="btn btn-outline-warning" type="submit">Find Food</button> 
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>                      
+    </section>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <p class="text-center h4 mt-5 mb-4 ">Most Popular This Month</p>
+      <section class="py-4 overflow-hidden" style="margin-top: 60px;">
+
+        <div class="container">
+          <div class="row gx-3 h-100 align-items-center">
+            <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+              <div class="card card-span h-100 rounded-3">
+                <img class="img-fluid rounded-3 my-card-image" src="img/bagel.jpg" alt="bagel" />
+                <div class="card-body ps-0">
+                  <h5 class="fw-bold text-1000 text-truncate mb-1">Bagel</h5>
+                  <div><span class="text-warning me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-primary"></span></div>
+                  <span class="text-1000 fw-bold">$1.99</span>
+                </div>
+              </div>
+              <div class="d-grid gap-2"><a class="btn btn-lg btn-warning" href="#!" role="button">Order now</a></div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+              <div class="card card-span h-100 rounded-3">
+                <img class="img-fluid rounded-3 my-card-image" src="img/coffee-background.jpg" alt="..." />
+                <div class="card-body ps-0">
+                  <h5 class="fw-bold text-1000 text-truncate mb-1">Background Coffee</h5>
+                  <div><span class="text-warning me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-primary"></span></div>
+                  <span class="text-1000 fw-bold">$3.00</span>
+                </div>
+              </div>
+              <div class="d-grid gap-2"><a class="btn btn-lg btn-warning" href="#!" role="button">Order now</a></div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+              <div class="card card-span h-100 rounded-3">
+                <img class="img-fluid rounded-3 my-card-image" src="img/nescafe.jpg" alt="nescafe" />
+                <div class="card-body ps-0">
+                  <h5 class="fw-bold text-1000 text-truncate mb-1">Nescafe</h5>
+                  <div><span class="text-warning me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-primary"></span></div>
+                  <span class="text-1000 fw-bold">$2.79</span>
+                </div>
+              </div>
+              <div class="d-grid gap-2"><a class="btn btn-lg btn-warning" href="#!" role="button">Order now</a></div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+              <div class="card card-span h-100 rounded-3">
+                <img class="img-fluid rounded-3 my-card-image" src="img/latte.jpg" alt="latte" />
+                <div class="card-body ps-0">
+                  <h5 class="fw-bold text-1000 text-truncate mb-1">Latte</h5>
+                  <div><span class="text-warning me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-primary"></span></div>
+                  <span class="text-1000 fw-bold">$3.88</span>
+                </div>
+              </div>
+              <div class="d-grid gap-2"><a class="btn btn-lg btn-warning" href="#!" role="button">Order now</a></div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+              <div class="card card-span h-100 rounded-3">
+                <img class="img-fluid rounded-3 my-card-image" src="img/hot-chocolate.jpg" alt="hot chocolate" />
+                <div class="card-body ps-0">
+                  <h5 class="fw-bold text-1000 text-truncate mb-1">Hot Chocolate</h5>
+                  <div><span class="text-warning me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-primary"></span></div>
+                  <span class="text-1000 fw-bold">$4.00</span>
+                </div>
+              </div>
+              <div class="d-grid gap-2"><a class="btn btn-lg btn-warning" href="#!" role="button">Order now</a></div>
+            </div>
+          </div>
+        </div><!-- end of .container-->        
+
+      </section>
+    
+
+    
+
+    <!-- Add more sections as needed -->
+
+    <div class="footer">
+        <p>&copy; 2024 Sip 'n Safe. All rights reserved.</p>
+    </div>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://unpkg.com/idb@6.1.3/build/iife/index-min.js"></script>
+
+    <script>
+
+$(document).ready(function() {
+      var users = [
+          {email: 'user1@example.com', password: 'password1', username: 'User1'},
+          {email: 'user2@example.com', password: 'password2', username: 'User2'},
+          {email: 'user3@example.com', password: 'password3', username: 'User3'}
+      ];
+      
+      function login(email, password) {
+          var user = users.find(function(user) {
+              return user.email === email && user.password === password;
+          });
+      
+          try{
+              localStorage.setItem('currentUser', JSON.stringify(user));
+              updateNavbar();
+          } catch (error) {
+              alert('Invalid email or password.');
+          }
+      }
+      
+      function logout() {
+          localStorage.removeItem('currentUser');
+          updateNavbar();
+      }
+      
+      function updateNavbar() {
+    if (localStorage.getItem('currentUser')) {
+        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        console.log(currentUser); // Log currentUser here
+        document.getElementById('signin').style.display = 'none';
+        document.getElementById('joinnow').style.display = 'none';
+        document.getElementById('username').textContent = currentUser.username;
+        document.getElementById('useremail').textContent = currentUser.email; // Display the user's email
+        document.getElementById('signout').style.display = 'block';
+    } else {
+        document.getElementById('signin').style.display = 'block';
+        document.getElementById('joinnow').style.display = 'block';
+        document.getElementById('username').textContent = '';
+        document.getElementById('useremail').textContent = ''; // Clear the user's email
+        document.getElementById('signout').style.display = 'none';
+    }
+}
+});
+      console.log(currentUser);
+      
+      // Call updateNavbar function when the page loads
+      window.onload = updateNavbar;
+      
+      // Call login function when form is submitted
+      // Call logout function when sign out button is clicked
+      </script>
+      
+</body>
+</html>

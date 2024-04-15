@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergies</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Add this to make the content stack vertically */
+            justify-content: space-between; /* Add this to push the footer to the bottom */
+            height: 100vh;
+        }
+        .form-border {
+            border: 1px solid #000; /* Change color as needed */
+            padding: 15px;
+            border-radius: 10px; /* Optional for rounded corners */
+            margin-top: 15px;
+            width:70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar-nav a.active {
+        color: #007bff; /* Change this to your preferred color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ms-3" href="#">Sip 'n Safe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="diary.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact-us.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recommendations.html">Recommendations</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item me-3" id="signin">
+                  <a class="nav-link" href="login.html">Sign In</a>
+              </li>
+              <li class="nav-item me-3" id="joinnow">
+                  <a class="btn btn-outline-dark" href="sign-up.html">Join Now</a>
+              </li>
+              <li class="nav-item me-3" id="username" style="display: none;"></li>
+              <ul class="navbar-nav">
+               
+                <li class="nav-item me-3" id="useremail" style="display: none;"></li> 
+                <li class="nav-item me-3" id="signout" style="display: none;">
+                    <a class="btn btn-outline-dark" href="#" onclick="logout()">Sign Out</a>
+                </li>
+            </ul> 
+          </ul>          
+        </div>
+    </nav>
+    <!--  -->
+    <form class="form-border">
+        <div class="mb-3">
+            <label for="allergyQuestion" class="form-label">Do you have any allergy or food intolerance?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="allergyQuestion" id="allergyYes" value="yes">
+                <label class="form-check-label" for="allergyYes">Yes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="allergyQuestion" id="allergyNo" value="no">
+                <label class="form-check-label" for="allergyNo">No</label>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <label class="form-label">What are you allergic to? (Check one or more)</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy1">
+                <label class="form-check-label" for="allergy1">Cereals that contain gluten and gluten products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy2">
+                <label class="form-check-label" for="allergy2">Shellfish and their products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy3">
+                <label class="form-check-label" for="allergy3">Eggs and egg products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy4">
+                <label class="form-check-label" for="allergy4">Fish and fish products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy5">
+                <label class="form-check-label" for="allergy5">Milk and milk products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy6">
+                <label class="form-check-label" for="allergy6">Tree nuts, sesame seeds and their products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy7">
+                <label class="form-check-label" for="allergy7">Peanuts</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy8">
+                <label class="form-check-label" for="allergy8">Soybeans and their products</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy9">
+                <label class="form-check-label" for="allergy9">Added sulphites in concentrations of 10 mg/kg or more</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="allergy10">
+                <label class="form-check-label" for="allergy10">Royal jelly (presented as food or present in food), bee pollen and propolis</label>
+            </div>
+        </div>
+
+        <div class="mt-auto py-3 text-center"> 
+            <a href="index.html"><button type="button" class="btn btn-outline-warning">Submit</button></a>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="footer text-center bg-light">
+        <p>&copy; 2024 Sip 'n Safe. All rights reserved.</p>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('input[type=radio][name=allergyQuestion]').change(function() {
+                if (this.value == 'no') {
+                    $(".form-check-input[type='checkbox']").prop('disabled', true);
+                }
+                else if (this.value == 'yes') {
+                    $(".form-check-input[type='checkbox']").prop('disabled', false);
+                }
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const nav = document.querySelector('.navbar-nav');
+        const links = Array.from(nav.getElementsByTagName('a'));
+        links.forEach(link => {
+            if (link.href === document.URL) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
